@@ -11,19 +11,20 @@
 <body>
 	<div class="container">
 		<div class="todo-app">
-			<h2> To-Do List<img src="images/icon.png" alt="icon"></h2>
+			<h2 class="title">To-Do List<img src="images/icon.png" alt="icon" class="icon"></h2>
 			<div class="row">
-				<input type="text" id="input-box" placeholder="Add your text"><button>Add</button>
+				<input type="text" id="input-box" class="input" placeholder="Add your text">
+				<button id="add-button" class="button">Add</button>
 			</div>
-			<ul id="list-container">
-				<li class="checked">Task 1</li>
+			<ul id="list-container" class="list">
+				<!-- <li class="checked">Task 1</li>
 				<li>Task 2</li>
-				<li>Task 3</li>	
+				<li>Task 3</li>	 -->
 			</ul>
 		</div>
 	</div>
 
-
+	<script src="main.js"></script>
 </body>
 
 </html>
