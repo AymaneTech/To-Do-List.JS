@@ -1,67 +1,85 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'poppins' sans-serif;
+  box-sizing: border-box;
 }
-body{
-  background-image: linear-gradient(to right, #1D367C,#3B1250);
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
 }
-.app{
+.todo-app{
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.todo-app h2{
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-app h2 img{
+  width: 30px;
+  margin-left: 10px;
+}
+.row{
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
 }
-
-.content{
-  background-color: #fff;
-  border-radius:.8rem;
-  box-shadow: rgba(99, 9);
-  width: 500px;
-  height: 500px;
-}
-
-.title{
-  margin: 2rem 0 2rem 2rem ;
-  display: flex;
-  align-items: center;
-}
-.title span{
-  font-size: 22px;
-  font-weight: 700;
-  color: #091b4a;
-  margin-right: 20px;
-}
-
-.title img{
-  width: 60px;
-  height: 60px;
-}
-
-.writing-notes{
-  display: flex;
-  justify-content: center;
-}
-
-.content input{
-  background: #f5f5f5;
+input {
+  flex: 1;
   border: none;
-  border-radius: 0.8rem;
-  width: 300px;
-  height: 50px;
+  outline: none;
+  background: transparent;
+  padding: 10px;
 }
-input::placeholder{
-  color: #333;
-  font-size: 16px;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-}
-.content button{
-  background-color: #3B1250;
-  width: 120px;
-  border-radius: 5rem;
+button{
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
   color: #fff;
-  font-weight: 600;
   font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: flex; /* Added to create a flex container */
+  align-items: center; /* Added to vertically align items */
+}
 
+ul li::before {
+  content: '';
+  height: 28px;
+  width: 28px;
+  margin-right: 10px; /* Added space between the pseudo-element and text */
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
 }

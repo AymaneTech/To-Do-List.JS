@@ -9,18 +9,21 @@
 </head>
 
 <body>
-	<div class="app">
-		<div class="content">
-			<div class="title">
-				<span>To-Do List</span>
-				<img src="img/logo.jpg" alt="icon">
+	<div class="container">
+		<div class="todo-app">
+			<h2> To-Do List<img src="images/icon.png" alt="icon"></h2>
+			<div class="row">
+				<input type="text" id="input-box" placeholder="Add your text"><button>Add</button>
 			</div>
-			<div class="writing-notes">
-				<input type="text" class="writing" placeholder="Add your task">
-				<button class="add-note">Add</button>
-			</div>
+			<ul id="list-container">
+				<li class="checked">Task 1</li>
+				<li>Task 2</li>
+				<li>Task 3</li>	
+			</ul>
 		</div>
 	</div>
+
+
 </body>
 
 </html>
